@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Information</title>
+</head>
+<body>
+    <h1>Edit Information</h1>
+    <form action="/edit" method="post">
+        <input type="hidden" name="id" th:value="${form_info.id}">
+        <p>Name: <input type="text" name="Name" th:value="${form_info.Name}"></p>
+        <p>Email: <input type="email" name="Email" th:value="${form_info.Email}"></p>
+        <p>Membership Date: <input type="date" name="MSD" th:value="${form_info.MSD}"></p>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>

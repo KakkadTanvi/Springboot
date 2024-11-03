@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Display Information</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>MSD</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="info : ${display}">
+            <td th:text="${info.id}"></td>
+            <td th:text="${info.Name}"></td>
+            <td th:text="${info.Email}"></td>
+            <td th:text="${info.MSD}"></td>
+            <td>
+                <a th:href="@{/edit/{id}(id=${info.id})}">Edit</a>
+            </td>
+            <td>
+                <a th:href="@{/Delete/{id}(id=${info.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
